@@ -111,6 +111,7 @@ export const rules: Rule[] = [
   ...nestjsRules,
   ...nextjsRules,
   ...nuxtJsRules,
+  ...odooRules,
   ...onchainkitRules,
   ...pixiJsRules,
   ...pythonRules,
