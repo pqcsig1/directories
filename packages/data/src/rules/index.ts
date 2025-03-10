@@ -40,6 +40,7 @@ import { monorepoTamagui } from "./monorepo-tamagui";
 import { nestjsRules } from "./nestjs";
 import { nextjsRules } from "./nextjs";
 import { nuxtJsRules } from "./nuxtjs";
+import { odooRules } from "./odoo";
 import { onchainkitRules } from "./onchainkit";
 import { pixiJsRules } from "./pixijs";
 import { pythonRules } from "./python";
