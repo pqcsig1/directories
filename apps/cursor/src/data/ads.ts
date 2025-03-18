@@ -19,27 +19,6 @@ export const ads: Ad[] = [
       "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-novu.png",
   },
   {
-    id: "midday",
-    title: "Midday",
-    description:
-      "Invoicing, Time tracking, File reconciliation, Storage, Financial Overview & your own Assistant",
-    logoUrl:
-      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-midday-logo.png",
-    imageUrl:
-      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-midday.png?cache=1",
-    link: "https://go.midday.ai/8cX3F4o",
-  },
-  {
-    id: "languine",
-    title: "Languine",
-    description: "Localization infrastructure made for fast-paced startups.",
-    logoUrl:
-      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-languine-logo.png",
-    imageUrl:
-      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-languine.png?cache=1",
-    link: "https://go.midday.ai/NnI1CUO",
-  },
-  {
     id: "composio",
     title: "our cto when MCP is not MCPin’!!!!",
     description:
