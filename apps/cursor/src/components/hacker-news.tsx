@@ -52,7 +52,7 @@ export function HackerNews() {
         >
           <p>
             Show HN: Cursor Directory – From a 3-hour build to a 250k users/mo
-            community
+            community.
           </p>
         </TooltipContent>
       </Tooltip>
