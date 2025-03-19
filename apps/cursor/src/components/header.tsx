@@ -12,7 +12,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Suspense, useState } from "react";
 import { CommandMenu } from "./command-menu";
-import { HackerNews } from "./hacker-news";
 import { MobileMenu } from "./mobile-menu";
 import { Button } from "./ui/button";
 import { UserMenu } from "./user-menu";
@@ -44,8 +43,6 @@ export function Header() {
         <Link href="/" className="font-medium font-mono text-sm">
           cursor.directory
         </Link>
-
-        <HackerNews />
 
         <div className="hidden md:flex items-center gap-5">
           {mainNavItems.map((link) => (
