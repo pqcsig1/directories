@@ -12,6 +12,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Suspense, useState } from "react";
 import { CommandMenu } from "./command-menu";
+import { HackerNews } from "./hacker-news";
 import { MobileMenu } from "./mobile-menu";
 import { Button } from "./ui/button";
 import { UserMenu } from "./user-menu";
@@ -39,10 +40,12 @@ export function Header() {
 
   return (
     <div className="flex justify-between items-center mt-2 md:mt-0">
-      <div className="md:fixed z-50 flex justify-between items-center top-0 px-6 py-2 w-full bg-background backdrop-filter backdrop-blur-sm bg-opacity-30">
+      <div className="md:fixed z-20 flex justify-between items-center top-0 px-6 py-2 w-full bg-background backdrop-filter backdrop-blur-sm bg-opacity-30">
         <Link href="/" className="font-medium font-mono text-sm">
           cursor.directory
         </Link>
+
+        <HackerNews />
 
         <div className="hidden md:flex items-center gap-5">
           {mainNavItems.map((link) => (
