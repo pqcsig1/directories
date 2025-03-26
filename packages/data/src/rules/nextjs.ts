@@ -136,7 +136,7 @@ export const nextjsRules = [
     - Use Tailwind CSS for styling
     - Use Tailwind CSS for utility-first, maintainable styling.
     - Design with mobile-first, responsive principles for flexibility across devices.
-    - Implement dark mode using CSS variables or Tailwind's dark mode features.
+    - Implement dark mode using CSS variables or Tailwind’s dark mode features.
     - Ensure color contrast ratios meet accessibility standards for readability.
     - Maintain consistent spacing values to establish visual harmony.
     - Define CSS variables for theme colors and spacing to support easy theming and maintainability.
