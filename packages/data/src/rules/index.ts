@@ -50,6 +50,7 @@ import { remixRules } from "./remix";
 import { robocorpRules } from "./robocorp";
 import { rustRules } from "./rust";
 import { salesforceRules } from "./salesforce";
+import { sanityRules } from "./sanity";
 import { solanaRules } from "./solana";
 import { solidityRules } from "./solidity";
 import { svelteRules } from "./svelte";
@@ -120,6 +121,7 @@ export const rules: Rule[] = [
   ...robocorpRules,
   ...rustRules,
   ...salesforceRules,
+  ...sanityRules,
   ...solanaRules,
   ...solidityRules,
   ...svelteRules,
