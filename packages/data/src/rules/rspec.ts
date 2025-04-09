@@ -19,6 +19,7 @@ When generating RSpec tests, follow these best practices to ensure they are comp
 ### Structure:
 - Organize tests logically using describe for classes/modules and context for different scenarios.
 - Use subject to define the object under test when appropriate to avoid repetition.
+- Ensure test file paths mirror the structure of the files being tested, but within the spec directory (e.g., app/models/user.rb → spec/models/user_spec.rb).
 
 ## Test Data Management:
 - Use let and let! to define test data, ensuring minimal and necessary setup.
@@ -26,7 +27,7 @@ When generating RSpec tests, follow these best practices to ensure they are comp
 
 ## Independence and Isolation:
 - Ensure each test is independent; avoid shared state between tests.
-- Use mocks and stubs to isolate the unit being tested, but avoid over-mocking; test real behavior when possible.
+- Use mocks to simulate calls to external services (APIs, databases) and stubs to return predefined values for specific methods. Isolate the unit being tested, but avoid over-mocking; test real behavior when possible.
 
 ## Avoid Repetition:
 - Use shared examples for common behaviors across different contexts.
