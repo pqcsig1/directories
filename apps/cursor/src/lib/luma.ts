@@ -27,12 +27,15 @@ export interface Event {
 }
 
 export async function getEvents(): Promise<{ entries: Event[] }> {
-  const response = await fetch(`${API_ENDPOINT}/calendar/list-events`, {
-    method: "GET",
-    headers: {
-      "X-Luma-API-Key": process.env.LUMA_API_KEY || "",
+  const response = await fetch(
+    `${API_ENDPOINT}/calendar/list-events?pagination_limit=100`,
+    {
+      method: "GET",
+      headers: {
+        "X-Luma-API-Key": process.env.LUMA_API_KEY || "",
+      },
     },
-  });
+  );
 
   return response.json();
 }
