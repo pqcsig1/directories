@@ -76,7 +76,6 @@ export const rules: Rule[] = [
   ...angularRules,
   ...astroRules,
   ...arduinoFrameworkRules,
-  ...aRules,
   ...autohotkeyRules,
   ...blazorRules,
   ...cosmwasmRules,
