@@ -4,6 +4,7 @@ import { androidRules } from "./android";
 import { angularRules } from "./angular";
 import { angularIonicFirebaseFirestoreRules } from "./angular-ionic-firebase-firestore";
 import { astroRules } from "./astro";
+import { arduinoFrameworkRules } from "./arduino-framework";
 import { autohotkeyRules } from "./autohotkey";
 import { blazorRules } from "./blazor";
 import { bootstrapRules } from "./bootstrap";
@@ -74,6 +75,8 @@ export const rules: Rule[] = [
   ...androidRules,
   ...angularRules,
   ...astroRules,
+  ...arduinoFrameworkRules,
+  ...aRules,
   ...autohotkeyRules,
   ...blazorRules,
   ...cosmwasmRules,
