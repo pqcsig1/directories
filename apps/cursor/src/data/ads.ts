@@ -114,4 +114,14 @@ export const ads: Ad[] = [
     imageUrl:
       "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-getstream.png",
   },
+  {
+    id: "runpod",
+    title: "RunPod",
+    description: "Train, fine-tune and deploy AI models on demand.",
+    link: "https://dub.sh/8x2aNff",
+    logoUrl:
+      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-runpod-logo.jpg",
+    imageUrl:
+      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-runpod.jpg",
+  },
 ];
