@@ -3,8 +3,8 @@ import { ALRules } from "./al";
 import { androidRules } from "./android";
 import { angularRules } from "./angular";
 import { angularIonicFirebaseFirestoreRules } from "./angular-ionic-firebase-firestore";
-import { astroRules } from "./astro";
 import { arduinoFrameworkRules } from "./arduino-framework";
+import { astroRules } from "./astro";
 import { autohotkeyRules } from "./autohotkey";
 import { blazorRules } from "./blazor";
 import { bootstrapRules } from "./bootstrap";
@@ -67,13 +67,13 @@ import { terraformRules } from "./terraform";
 import { typescriptRules } from "./typescript";
 import { uiuxRules } from "./uiux-design";
 import { unityCSharpRules } from "./unity-c-sharp";
+import { viewComfyRules } from "./viewcomfy";
 import { vivadoRules } from "./vivado";
 import { vueTsRules } from "./vue";
 import { webDevelopmentRules } from "./web-development";
 import { webScrapingRules } from "./web-scraping";
 import { wordpressRules } from "./wordpress";
 import { wordpressWoocommerce } from "./wordpress-woocommerce";
-import { viewComfyRules } from "./viewcomfy";
 
 export const rules: Rule[] = [
   ...ALRules,
@@ -154,7 +154,7 @@ export const rules: Rule[] = [
 ].map(
   (rule): Rule => ({
     ...rule,
-    libs: rule.libs || [],
+    libs: "libs" in rule ? rule.libs : [],
   }),
 );
 

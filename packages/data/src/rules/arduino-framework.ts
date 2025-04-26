@@ -1,4 +1,4 @@
-export const astroRules = [
+export const arduinoFrameworkRules = [
   {
     title: "Arduino-Framework Cursor Rules",
     tags: ["Arduino-Framework"],
