@@ -93,17 +93,6 @@ export const ads: Ad[] = [
     link: "https://dub.sh/ZAFpdOd",
   },
   {
-    id: "getstream",
-    title: "Stream",
-    description:
-      "Stream - Scalable APIs for Chat, Feeds, Moderation, Video, and Audio.",
-    link: "https://dub.sh/LNmFf9V",
-    logoUrl:
-      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-getstream-logo.png",
-    imageUrl:
-      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-getstream.png",
-  },
-  {
     id: "runpod",
     title: "RunPod",
     description: "Train, fine-tune and deploy AI models on demand.",
