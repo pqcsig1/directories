@@ -113,4 +113,15 @@ export const ads: Ad[] = [
     imageUrl:
       "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-coderabbit.jpg",
   },
+  {
+    id: "braingrid",
+    title: "BrainGrid",
+    description:
+      "Turn half-baked thoughts into crystal-clear, AI-ready specs and tasks that Cursor can nail, the first time",
+    logoUrl:
+      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-braingrid-logo.svg",
+    link: "https://dub.sh/qNdeluS",
+    imageUrl:
+      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-braingrid.png",
+  },
 ];
