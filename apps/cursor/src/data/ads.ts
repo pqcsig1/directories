@@ -9,17 +9,6 @@ export interface Ad {
 
 export const ads: Ad[] = [
   {
-    id: "taska",
-    title: "Taska for GitHub & GitLab Issues",
-    description:
-      "Taska is a beautifully designed Mac app for quickly creating and editing issues.",
-    logoUrl:
-      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-taska-logo.png",
-    imageUrl:
-      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-taska.png",
-    link: "https://dub.sh/8nBbSLT",
-  },
-  {
     id: "polar",
     title: "Polar",
     description: "The fastest growing engine for SaaS & Digital Products",
