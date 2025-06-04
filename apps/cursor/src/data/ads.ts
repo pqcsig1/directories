@@ -103,4 +103,14 @@ export const ads: Ad[] = [
     imageUrl:
       "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-braingrid.png",
   },
+  {
+    id: "byterover",
+    title: "Byterover",
+    description: "Shared memory layer for your AI coding agents",
+    logoUrl:
+      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-byterover-logo.png",
+    imageUrl:
+      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-byterover.png",
+    link: "https://go.midday.ai/lFmE25k",
+  },
 ];
