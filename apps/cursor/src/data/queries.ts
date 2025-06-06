@@ -172,6 +172,28 @@ export async function getFeaturedMCPs({
   };
 }
 
+export async function getTotalUsers() {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("users")
+    .select("count", { count: "exact" })
+    .single();
+
+  return { data, error };
+}
+
+export async function getNewUsers() {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("users")
+    .select("slug, name, image")
+    .eq("public", true)
+    .order("created_at", { ascending: false })
+    .limit(24);
+
+  return { data, error };
+}
+
 export async function getMCPs({
   page = 1,
   limit = 36,

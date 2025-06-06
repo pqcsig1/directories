@@ -16,10 +16,12 @@ export function Startpage({
   sections,
   jobs,
   mcps,
+  totalUsers,
 }: {
   sections: Section[];
   jobs?: Job[] | null;
   mcps?: MCP[] | null;
+  totalUsers: number;
 }) {
   const [search] = useQueryState("q", { defaultValue: "" });
 
@@ -37,7 +39,7 @@ export function Startpage({
             <Cursor />
           </div>
 
-          <HeroTitle />
+          <HeroTitle totalUsers={totalUsers} />
 
           <div className="max-w-[620px] mx-auto w-full mb-14">
             <GlobalSearchInput />

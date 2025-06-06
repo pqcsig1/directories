@@ -2,20 +2,29 @@
 
 import Link from "next/link";
 
-export function HeroTitle() {
-  const text = "Join the Cursor community ";
+export function HeroTitle({ totalUsers }: { totalUsers: number }) {
+  const formatNumber = (num: number) => {
+    if (num >= 1000000)
+      return `${(num / 1000000).toFixed(num % 1000000 === 0 ? 0 : 1)}M`;
+    if (num >= 1000)
+      return `${(num / 1000).toFixed(num % 1000 === 0 ? 0 : 1)}k`;
+    return num.toString();
+  };
+  const text = `Join the Cursor community with ${formatNumber(totalUsers)}+ members`;
 
   return (
     <div className="text-center mb-8">
-      <h1
-        className="text-[21px] mb-2"
-        style={{
-          opacity: 0,
-          animation: "fadeIn 0.2s ease forwards",
-        }}
-      >
-        {text}
-      </h1>
+      <Link href="/login">
+        <h1
+          className="text-[21px] mb-2"
+          style={{
+            opacity: 0,
+            animation: "fadeIn 0.2s ease forwards",
+          }}
+        >
+          {text}
+        </h1>
+      </Link>
 
       <p
         className="text-[#878787] text-sm max-w-[620px] mx-auto"
