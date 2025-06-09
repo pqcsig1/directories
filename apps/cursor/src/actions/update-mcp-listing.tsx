@@ -22,7 +22,7 @@ export const updateMCPListingAction = authActionClient
   )
   .action(
     async ({
-      parsedInput: { id, name, company_id, description, link, logo },
+      parsedInput: { id, name, company_id, description, link, logo, config },
       ctx: { userId },
     }) => {
       const supabase = await createClient();
