@@ -6,7 +6,7 @@ export async function getUserProfile(slug: string, userId?: string) {
   const query = supabase
     .from("users")
     .select(
-      "id, name, image, hero, status, bio, work, website, slug, social_x_link, created_at, public, posts(*, votes(id))",
+      "id, name, image, hero, status, bio, work, website, slug, social_x_link, created_at, public, posts(*, votes(id)), is_following, follower_count, following_count",
     )
     .eq("slug", slug);
 
@@ -27,6 +27,8 @@ export async function getUserProfile(slug: string, userId?: string) {
   return {
     data: {
       ...data,
+      following_count: data?.following_count || 0,
+      followers_count: data?.follower_count || 0,
       posts: data?.posts
         ?.sort(
           (a: { created_at: string }, b: { created_at: string }) =>
@@ -40,6 +42,26 @@ export async function getUserProfile(slug: string, userId?: string) {
         })),
     },
   };
+}
+
+export async function getUserFollowers(id: string) {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("followers")
+    .select("follower:follower_id(id, name, image, slug)")
+    .eq("following_id", id);
+
+  return { data, error };
+}
+
+export async function getUserFollowing(id: string) {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("followers")
+    .select("following:following_id(id, name, image, slug)")
+    .eq("follower_id", id);
+
+  return { data, error };
 }
 
 export async function getPopularPosts() {
@@ -224,15 +246,19 @@ export async function getMCPBySlug(slug: string) {
   return { data, error };
 }
 
+type GetMembersParams = {
+  page?: number;
+  limit?: number;
+  q?: string;
+};
+
 export async function getMembers({
   page = 1,
   limit = 33,
-}: {
-  page?: number;
-  limit?: number;
-} = {}) {
+  q,
+}: GetMembersParams = {}) {
   const supabase = await createClient();
-  const { data, error } = await supabase
+  const query = supabase
     .from("users")
     .select("*")
     .eq("public", true)
@@ -240,6 +266,15 @@ export async function getMembers({
     .limit(limit)
     .range((page - 1) * limit, page * limit - 1)
     .neq("name", "unknown user");
+
+  if (q) {
+    query.textSearch("name", q, {
+      type: "websearch",
+      config: "english",
+    });
+  }
+
+  const { data, error } = await query;
 
   return { data, error };
 }

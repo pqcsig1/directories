@@ -1,4 +1,5 @@
 import { MembersList } from "@/components/members/members-list";
+import { SearchInput } from "@/components/search-input";
 import { Button } from "@/components/ui/button";
 import { getMembers, getTotalUsers } from "@/data/queries";
 import { formatNumber } from "@/utils/format";
@@ -15,10 +16,12 @@ export const revalidate = 300;
 
 type Props = {
   params: Promise<{ number: string[] | undefined }>;
+  searchParams: Promise<{ q: string | undefined }>;
 };
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params, searchParams }: Props) {
   const { number } = await params;
+  const { q } = await searchParams;
 
   const { data: totalUsers } = await getTotalUsers();
 
@@ -27,6 +30,7 @@ export default async function Page({ params }: Props) {
   const { data: members } = await getMembers({
     page: pageNumber,
     limit: 90,
+    q,
   });
 
   return (
@@ -50,6 +54,12 @@ export default async function Page({ params }: Props) {
           </Button>
         </Link>
       </div>
+
+      <SearchInput
+        placeholder="Search members"
+        className="border-l-0 border-r-0 border-t-0 border-b-[1px] border-border px-0 mb-8"
+        shallow={false}
+      />
 
       <MembersList members={members} />
 

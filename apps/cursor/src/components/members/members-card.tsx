@@ -7,14 +7,23 @@ import Link from "next/link";
 export function MembersCard({
   member,
   gray = false,
+  noBorder = false,
 }: {
-  member: any;
+  member: {
+    slug: string;
+    image: string;
+    name: string;
+  };
   gray?: boolean;
+  noBorder?: boolean;
 }) {
   return (
     <Link
       href={`/u/${member.slug}`}
-      className="flex border border-border p-2 items-center gap-2 group"
+      className={cn(
+        "flex border border-border p-2 items-center gap-2 group",
+        noBorder && "border-none",
+      )}
     >
       <Avatar className="rounded-none">
         <AvatarImage

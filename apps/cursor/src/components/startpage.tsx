@@ -26,8 +26,8 @@ export function Startpage({
   jobs?: Job[] | null;
   mcps?: MCP[] | null;
   totalUsers: number;
-  members: any[] | null;
-  popularPosts: any[] | null;
+  members: unknown[] | null;
+  popularPosts: unknown[] | null;
 }) {
   const [search] = useQueryState("q", { defaultValue: "" });
 
@@ -160,6 +160,7 @@ export function Startpage({
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {members?.map((member) => (
+                  // @ts-ignore
                   <MembersCard key={member.id} member={member} gray />
                 ))}
               </div>
@@ -201,6 +202,7 @@ export function Startpage({
               </div>
               <div className="space-y-10">
                 {popularPosts?.slice(0, 3).map((post) => (
+                  // @ts-ignore
                   <BoardPost key={post.post_id} {...post} />
                 ))}
               </div>

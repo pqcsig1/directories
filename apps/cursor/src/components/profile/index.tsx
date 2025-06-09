@@ -5,9 +5,9 @@ import { Suspense } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import { ProfileCompanies } from "./profile-companies";
 import { ProfileContent } from "./profile-content";
-import { ProfileHeader } from "./profile-header";
-import { ProfileHero } from "./profile-hero";
+
 import { ProfilePosts } from "./profile-posts";
+import { ProfileTop } from "./profile-top";
 
 export async function Profile({
   slug,
@@ -34,19 +34,7 @@ export async function Profile({
 
   return (
     <div className="w-full">
-      <ProfileHero userId={data?.id} isOwner={isOwner} hero={data?.hero} />
-      <ProfileHeader
-        image={data?.image}
-        name={data?.name}
-        status={data?.status}
-        isOwner={isOwner}
-        bio={data?.bio}
-        work={data?.work}
-        website={data?.website}
-        social_x_link={data?.social_x_link}
-        is_public={data?.public}
-        slug={data?.slug}
-      />
+      <ProfileTop data={data} isOwner={isOwner} />
 
       <ProfileContent
         bio={data?.bio}
@@ -73,7 +61,7 @@ export async function Profile({
 
         <TabsContent value="posts" className="mt-6 space-y-10 min-h-[300px]">
           {/* @ts-ignore */}
-          <ProfilePosts data={data?.posts} />
+          <ProfilePosts data={data?.posts} isOwner={isOwner} />
         </TabsContent>
 
         <TabsContent value="companies" className="mt-6 min-h-[300px]">

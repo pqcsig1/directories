@@ -39,6 +39,7 @@ export default function BoardList({ popularPosts }: BoardListProps) {
 
     setIsOpen(true);
   };
+
   return (
     <div className="w-full">
       <div className="flex justify-between items-center w-full">

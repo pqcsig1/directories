@@ -25,7 +25,7 @@ export const createMCPListingAction = authActionClient
   )
   .action(
     async ({
-      parsedInput: { name, company_id, logo, description, link, plan },
+      parsedInput: { name, company_id, logo, description, link, plan, config },
       ctx: { userId, email, name: customerName },
     }) => {
       const supabase = await createClient();
