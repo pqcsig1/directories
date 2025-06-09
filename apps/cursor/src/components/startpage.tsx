@@ -200,8 +200,8 @@ export function Startpage({
                 </Link>
               </div>
               <div className="space-y-10">
-                {popularPosts?.slice(0, 3).map((post, index) => (
-                  <BoardPost key={post.post_id} index={index} {...post} />
+                {popularPosts?.slice(0, 3).map((post) => (
+                  <BoardPost key={post.post_id} {...post} />
                 ))}
               </div>
             </motion.div>

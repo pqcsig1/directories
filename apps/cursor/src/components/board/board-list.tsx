@@ -61,7 +61,7 @@ export default function BoardList({ popularPosts }: BoardListProps) {
 
       <div className="my-14 space-y-10">
         {popularPosts.map((post, index) => (
-          <BoardPost key={post.post_id} index={index} {...post} />
+          <BoardPost key={post.post_id} {...post} />
         ))}
       </div>
 
