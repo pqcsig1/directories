@@ -44,7 +44,7 @@ export const toggleFollowAction = authActionClient
         if (data.follower) {
           const { data: userData } = await adminClient
             .from("users")
-            .select("email, name")
+            .select("email, name, follow_email")
             .eq("id", userId)
             .single();
 
@@ -52,21 +52,24 @@ export const toggleFollowAction = authActionClient
             throw new Error("User not found");
           }
 
-          waitUntil(
-            resend.emails.send({
-              from: "Cursor Directory <hello@transactional.cursor.directory>",
-              to: userData.email!,
-              //   @ts-ignore
-              subject: `${data.follower.name} is now following you on Cursor Directory`,
-              react: FollowerEmail({
-                name: userData.name!,
-                // @ts-ignore
-                followerName: data.follower.name!,
-                // @ts-ignore
-                followerSlug: data.follower.slug!,
+          if (userData.follow_email) {
+            waitUntil(
+              resend.emails.send({
+                from: "Cursor Directory <hello@transactional.cursor.directory>",
+                to: userData.email!,
+                //   @ts-ignore
+                subject: `${data.follower.name} is now following you on Cursor Directory`,
+                react: FollowerEmail({
+                  name: userData.name!,
+                  // @ts-ignore
+                  followerName: data.follower.name!,
+                  // @ts-ignore
+                  followerSlug: data.follower.slug!,
+                  followingSlug: slug,
+                }),
               }),
-            }),
-          );
+            );
+          }
         }
 
         return;

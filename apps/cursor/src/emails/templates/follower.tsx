@@ -17,10 +17,12 @@ export default function FollowerEmail({
   name = "Pontus",
   followerName = "Viktor",
   followerSlug = "viktor",
+  followingSlug = "pontus",
 }: {
   name: string;
   followerName: string;
   followerSlug: string;
+  followingSlug: string;
 }) {
   return (
     <Html>
@@ -43,9 +45,7 @@ export default function FollowerEmail({
         <Body className="bg-white font-mono">
           <Container className="mx-auto py-5 pb-12 max-w-[580px]">
             <Logo />
-
             <Text className="text-xs leading-7 mb-6 font-mono">Hi {name},</Text>
-
             <Text className="text-xs leading-7 pb-2 font-mono">
               Great news!{" "}
               <Link
@@ -64,13 +64,11 @@ export default function FollowerEmail({
               </Link>{" "}
               with the community.
             </Text>
-
             <Text className="text-xs leading-7 pb-2 font-mono">
               Following allows developers to stay connected with creators whose
               work they find valuable. When someone follows you, they're
               expressing interest in your contributions to the Cursor ecosystem.
             </Text>
-
             <Section className="mt-2">
               <Text className="text-xs leading-7 mb-2 font-mono">
                 Why not explore what others are building? You can:
@@ -104,11 +102,9 @@ export default function FollowerEmail({
                 </Link>
               </Text>
             </Section>
-
             <Text className="text-xs leading-7 font-mono">
               Looking forward to seeing what you create!
             </Text>
-
             <Text className="text-xs leading-7 mt-2 font-mono">
               Best,
               <br />
@@ -126,7 +122,13 @@ export default function FollowerEmail({
                 @Viktor
               </Link>
             </Text>
-
+            <Link
+              href={`https://cursor.directory/u/${followingSlug}/settings`}
+              className="text-xs leading-7 font-mono underline text-black"
+            >
+              Manage your notification settings
+            </Link>
+            <br /> <br />
             <Footer />
           </Container>
         </Body>

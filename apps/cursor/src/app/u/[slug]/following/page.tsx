@@ -1,8 +1,6 @@
 import { MembersCard } from "@/components/members/members-card";
-import { Profile } from "@/components/profile";
 import { ProfileTop } from "@/components/profile/profile-top";
 import { getUserFollowing, getUserProfile } from "@/data/queries";
-import { Avatar } from "@radix-ui/react-avatar";
 
 type Params = Promise<{ slug: string }>;
 
