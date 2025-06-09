@@ -1,6 +1,8 @@
 import { MembersCard } from "@/components/members/members-card";
 import { ProfileTop } from "@/components/profile/profile-top";
 import { getUserFollowing, getUserProfile } from "@/data/queries";
+import { getSession } from "@/utils/supabase/auth";
+import { redirect } from "next/navigation";
 
 type Params = Promise<{ slug: string }>;
 
@@ -20,6 +22,11 @@ export default async function Page({ params }: { params: Params }) {
   const { data } = await getUserProfile(slug);
 
   const { data: following } = await getUserFollowing(data?.id);
+  const session = await getSession();
+
+  if (!session) {
+    redirect("/login");
+  }
 
   if (!data) {
     return (
