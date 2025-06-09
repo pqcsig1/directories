@@ -114,3 +114,17 @@ export const ads: Ad[] = [
     link: "https://go.midday.ai/lFmE25k",
   },
 ];
+
+export const rulePageAds = [
+  {
+    id: "coderabbit",
+    title: "CodeRabbit",
+    description:
+      "AI Code Reviews. Spot bugs, 1-click fixes, refactor effortlessly",
+    logoUrl:
+      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-coderabbit-logo.webp",
+    link: "https://dub.sh/7SQ41eS",
+    imageUrl:
+      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-coderabbit.jpg",
+  },
+];
