@@ -50,9 +50,9 @@ export default async function Page({ params }: { params: Params }) {
             {followers?.map((user) => (
               <MembersCard
                 // @ts-ignore
-                key={user.following.id}
+                key={user.follower.id}
                 // @ts-ignore
-                member={user.following}
+                member={user.follower}
                 noBorder
               />
             ))}
