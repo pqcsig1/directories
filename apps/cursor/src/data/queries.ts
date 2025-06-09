@@ -224,12 +224,22 @@ export async function getMCPBySlug(slug: string) {
   return { data, error };
 }
 
-export async function getMembers() {
+export async function getMembers({
+  page = 1,
+  limit = 33,
+}: {
+  page?: number;
+  limit?: number;
+} = {}) {
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("users")
     .select("*")
-    .eq("public", true);
+    .eq("public", true)
+    .order("created_at", { ascending: false })
+    .limit(limit)
+    .range((page - 1) * limit, page * limit - 1)
+    .neq("name", "unknown user");
 
   return { data, error };
 }
