@@ -26,20 +26,15 @@ export function RuleSidebar({ rule }: { rule: Rule }) {
         </div>
         <div className="flex flex-row gap-2 items-center mt-4 mb-2">
           {rule.author?.url && (
-            <a href={rule.author.url} target="_blank" rel="noopener noreferrer">
-              <Avatar className="size-6">
-                {rule.author.avatar && isImageUrl(rule.author.avatar) ? (
-                  <AvatarImage
-                    src={rule.author.avatar}
-                    alt={rule.author.name}
-                  />
-                ) : (
-                  <AvatarFallback>
-                    {generateNameAbbr(rule.author.name)}
-                  </AvatarFallback>
-                )}
-              </Avatar>
-            </a>
+            <Avatar className="size-6">
+              {rule.author.avatar && isImageUrl(rule.author.avatar) ? (
+                <AvatarImage src={rule.author.avatar} alt={rule.author.name} />
+              ) : (
+                <AvatarFallback>
+                  {generateNameAbbr(rule.author.name)}
+                </AvatarFallback>
+              )}
+            </Avatar>
           )}
           <h3 className="text-sm font-medium">{rule.author?.name}</h3>
         </div>

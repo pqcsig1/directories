@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 import type { Rule } from "@directories/data/rules";
 import Link from "next/link";
 import { CopyButton } from "./copy-button";
-import { InstallCommand } from "./install-command";
 import { SaveRuleButton } from "./save-rule-button";
 import { ShareButton } from "./share-button";
 
@@ -22,7 +21,6 @@ export function RuleCard({ rule, isPage }: { rule: Rule; isPage?: boolean }) {
         )}
       >
         <div className="group-hover:flex hidden right-4 bottom-4 absolute z-10 space-x-2">
-          {isPage && <InstallCommand slug={rule.slug} />}
           <ShareButton slug={rule.slug} />
           <CopyButton content={rule.content} slug={rule.slug} />
           <SaveRuleButton content={rule.content} slug={rule.slug} />

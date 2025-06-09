@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import { ProfileCompanies } from "./profile-companies";
 import { ProfileContent } from "./profile-content";
 import { ProfileHeader } from "./profile-header";
+import { ProfileHero } from "./profile-hero";
 import { ProfilePosts } from "./profile-posts";
 
 export async function Profile({
@@ -33,6 +34,7 @@ export async function Profile({
 
   return (
     <div className="w-full">
+      <ProfileHero userId={data?.id} isOwner={isOwner} hero={data?.hero} />
       <ProfileHeader
         image={data?.image}
         name={data?.name}
