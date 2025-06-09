@@ -38,8 +38,6 @@ export function FollowButton({ slug, id }: Props) {
         .eq("following_id", id)
         .maybeSingle();
 
-      console.log(data);
-
       if (data) {
         setIsFollowing(true);
       }
