@@ -30,16 +30,6 @@ export const ads: Ad[] = [
     link: "https://dub.sh/quKS4BD",
   },
   {
-    id: "upstash",
-    title: "Upstash",
-    description: "Serverless Data Platform for Developers and Agents",
-    logoUrl:
-      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-upstash-logo.png",
-    imageUrl:
-      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-upstash.jpg",
-    link: "https://dub.sh/O0Fclmb",
-  },
-  {
     id: "compai",
     title: "Comp AI",
     description: "Open Source - Get SOC 2, ISO 27001 & GDPR compliant",
