@@ -1,4 +1,4 @@
-export function ProfileSponsored() {
+export function CompanySponsored() {
   return (
     <a
       href="https://coderabbit.link/GFltQZV"

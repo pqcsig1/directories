@@ -21,7 +21,7 @@ export function Banner() {
   const banners = [
     {
       id: "coderabbit",
-      href: "https://dub.sh/7SQ41eS",
+      href: "https://coderabbit.link/cdir",
       logo: (
         <svg
           xmlns="http://www.w3.org/2000/svg"

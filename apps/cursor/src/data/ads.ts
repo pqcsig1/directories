@@ -78,7 +78,7 @@ export const ads: Ad[] = [
       "AI Code Reviews. Spot bugs, 1-click fixes, refactor effortlessly",
     logoUrl:
       "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-coderabbit-logo.webp",
-    link: "https://dub.sh/7SQ41eS",
+    link: "https://coderabbit.link/XrK0XJY",
     imageUrl:
       "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-coderabbit.jpg",
   },
@@ -113,7 +113,7 @@ export const rulePageAds = [
       "AI Code Reviews. Spot bugs, 1-click fixes, refactor effortlessly",
     logoUrl:
       "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-coderabbit-logo.webp",
-    link: "https://dub.sh/7SQ41eS",
+    link: "https://coderabbit.link/GshBpe7",
     imageUrl:
       "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-coderabbit.jpg",
   },
