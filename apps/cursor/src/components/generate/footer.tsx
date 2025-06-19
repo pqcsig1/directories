@@ -11,7 +11,7 @@ export function GenerateFooter() {
       className="text-center text-sm text-[#878787] fixed bottom-6 left-0 right-0 mx-auto w-fit"
     >
       <a
-        href="https://dub.sh/7SQ41eS"
+        href="https://coderabbit.link/IcAyMXW"
         target="_blank"
         rel="noopener noreferrer"
         className="absolute bottom-0 right-4 bg-[#0D0D0D] p-2 flex flex-col gap-2"
