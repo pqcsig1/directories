@@ -113,6 +113,16 @@ export const ads: Ad[] = [
     logoUrl:
       "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-endgame.webp",
   },
+  {
+    id: "korbit",
+    title: "Korbit AI",
+    description: "Deliver better code, faster.",
+    imageUrl:
+      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-korbit.png",
+    link: "https://go.midday.ai/ahVXS7J",
+    logoUrl:
+      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-korbit-logo.jpg",
+  },
 ];
 
 export const rulePageAds = [
