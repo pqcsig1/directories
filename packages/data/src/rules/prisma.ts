@@ -1,8 +1,8 @@
-export const nextjsRules = [
+export const prismaRules = [
   {
     title: "Prisma ORM Cursor Rules",
     tags: ["Prisma", "TypeScript", "ORM"],
-    libs: [ "prisma", ],
+    libs: ["prisma"],
     slug: "prisma-orm-cursor-rules",
     content: `
     Prisma ORM Development Guidelines
