@@ -30,16 +30,6 @@ export const ads: Ad[] = [
     link: "https://dub.sh/quKS4BD",
   },
   {
-    id: "compai",
-    title: "Comp AI",
-    description: "Open Source - Get SOC 2, ISO 27001 & GDPR compliant",
-    logoUrl:
-      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-compai-logo.jpg",
-    imageUrl:
-      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-compai.png",
-    link: "https://dub.sh/DwzRg5D",
-  },
-  {
     id: "speakeasy",
     title: "Build APIs LLMs love",
     description:
