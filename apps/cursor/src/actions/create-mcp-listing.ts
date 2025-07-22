@@ -18,14 +18,22 @@ export const createMCPListingAction = authActionClient
       company_id: z.string().nullable(),
       logo: z.string().nullable(),
       description: z.string(),
-      config: z.record(z.string(), z.any()).nullable(),
+      mcp_link: z.string().nullable().optional(),
       link: z.string().url(),
       plan: z.enum(["standard", "featured", "premium"]),
     }),
   )
   .action(
     async ({
-      parsedInput: { name, company_id, logo, description, link, plan, config },
+      parsedInput: {
+        name,
+        company_id,
+        logo,
+        description,
+        link,
+        plan,
+        mcp_link,
+      },
       ctx: { userId, email, name: customerName },
     }) => {
       const supabase = await createClient();
@@ -55,7 +63,7 @@ export const createMCPListingAction = authActionClient
           company_id,
           logo,
           description,
-          config,
+          mcp_link,
           link,
           plan,
           active: plan === "standard",
