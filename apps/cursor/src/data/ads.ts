@@ -19,17 +19,6 @@ export const ads: Ad[] = [
     link: "https://go.midday.ai/JYZ5WcG",
   },
   {
-    id: "convex",
-    title: "Convex",
-    description:
-      "The database designed for AI code generation and vibe coding.",
-    logoUrl:
-      "https://pbs.twimg.com/profile_images/1886599096636694528/0Y8VYt94_400x400.png",
-    imageUrl:
-      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-convex-v2.jpg",
-    link: "https://dub.sh/quKS4BD",
-  },
-  {
     id: "speakeasy",
     title: "Build APIs LLMs love",
     description:
