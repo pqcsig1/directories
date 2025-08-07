@@ -95,9 +95,9 @@ export const ads: Ad[] = [
   {
     id: "korbit",
     title: "Korbit AI",
-    description: "Deliver better code, faster.",
+    description: "Deliver better code, faster with AI-powered code reviews.",
     imageUrl:
-      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-korbit.png",
+      "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-korbit-v2.png",
     link: "https://go.midday.ai/ahVXS7J",
     logoUrl:
       "https://pub-abe1cd4008f5412abb77357f87d7d7bb.r2.dev/ads-korbit-logo.jpg",
